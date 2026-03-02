@@ -1,0 +1,604 @@
+{
+  "notes": [
+    "params must be JSON object mapped to function keyword arguments", 
+    "set environment variables Access_key and Secret_key before execution"
+  ], 
+  "version": 1, 
+  "actions": [
+    {
+      "action": "bucket-management/create_bucket", 
+      "function": "test_create_bucket", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [], 
+      "file": "apis/bucket-management/create_bucket.py"
+    }, 
+    {
+      "action": "bucket-management/delete_bucket", 
+      "function": "test_delete_bucket", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [], 
+      "file": "apis/bucket-management/delete_bucket.py"
+    }, 
+    {
+      "action": "bucket-management/get_bucket_config", 
+      "function": "test_get_bucket_config", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [
+        "with_config"
+      ], 
+      "file": "apis/bucket-management/get_bucket_config.py"
+    }, 
+    {
+      "action": "bucket-management/list_buckets", 
+      "function": "test_list_buckets", 
+      "required": [], 
+      "optional": [], 
+      "file": "apis/bucket-management/list_buckets.py"
+    }, 
+    {
+      "action": "bucket-management/update_bucket_config", 
+      "function": "test_update_bucket_config", 
+      "required": [
+        "bucket_name", 
+        "config_data"
+      ], 
+      "optional": [], 
+      "file": "apis/bucket-management/update_bucket_config.py"
+    }, 
+    {
+      "action": "certificate-management/delete_domain_certificate", 
+      "function": "test_delete_domain_certificate", 
+      "required": [
+        "bucket_name", 
+        "domain", 
+        "cert_name"
+      ], 
+      "optional": [], 
+      "file": "apis/certificate-management/delete_domain_certificate.py"
+    }, 
+    {
+      "action": "certificate-management/list_domain_certificates", 
+      "function": "test_list_domain_certificates", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [], 
+      "file": "apis/certificate-management/list_domain_certificates.py"
+    }, 
+    {
+      "action": "certificate-management/update_certificate", 
+      "function": "test_update_certificate", 
+      "required": [
+        "bucket_name", 
+        "domain", 
+        "cert_name", 
+        "update_data"
+      ], 
+      "optional": [], 
+      "file": "apis/certificate-management/update_certificate.py"
+    }, 
+    {
+      "action": "certificate-management/upload_domain_certificate", 
+      "function": "test_upload_domain_certificate", 
+      "required": [
+        "bucket_name", 
+        "certificate_data"
+      ], 
+      "optional": [], 
+      "file": "apis/certificate-management/upload_domain_certificate.py"
+    }, 
+    {
+      "action": "domain-management/bind_downstream_domain", 
+      "function": "test_bind_downstream_domain", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [
+        "domain_type"
+      ], 
+      "file": "apis/domain-management/bind_downstream_domain.py"
+    }, 
+    {
+      "action": "domain-management/bind_upstream_domain", 
+      "function": "test_bind_upstream_domain", 
+      "required": [
+        "bucket_name", 
+        "domain", 
+        "domain_type"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/bind_upstream_domain.py"
+    }, 
+    {
+      "action": "domain-management/get_downstream_domain_config", 
+      "function": "test_get_downstream_domain_config", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/get_downstream_domain_config.py"
+    }, 
+    {
+      "action": "domain-management/get_upstream_domain_config", 
+      "function": "test_get_upstream_domain_config", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/get_upstream_domain_config.py"
+    }, 
+    {
+      "action": "domain-management/list_downstream_domains", 
+      "function": "test_list_downstream_domains", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/list_downstream_domains.py"
+    }, 
+    {
+      "action": "domain-management/list_upstream_domains", 
+      "function": "test_list_upstream_domains", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/list_upstream_domains.py"
+    }, 
+    {
+      "action": "domain-management/unbind_downstream_domain", 
+      "function": "test_unbind_downstream_domain", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/unbind_downstream_domain.py"
+    }, 
+    {
+      "action": "domain-management/unbind_upstream_domain", 
+      "function": "test_unbind_upstream_domain", 
+      "required": [
+        "bucket_name", 
+        "domain"
+      ], 
+      "optional": [], 
+      "file": "apis/domain-management/unbind_upstream_domain.py"
+    }, 
+    {
+      "action": "domain-management/update_downstream_domain_config", 
+      "function": "test_update_downstream_domain_config", 
+      "required": [
+        "bucket_name", 
+        "domain", 
+        "config_data"
+      ], 
+      "optional": [
+        "fields"
+      ], 
+      "file": "apis/domain-management/update_downstream_domain_config.py"
+    }, 
+    {
+      "action": "domain-management/update_upstream_domain_config", 
+      "function": "test_update_upstream_domain_config", 
+      "required": [
+        "bucket_name", 
+        "domain", 
+        "config_data"
+      ], 
+      "optional": [
+        "fields"
+      ], 
+      "file": "apis/domain-management/update_upstream_domain_config.py"
+    }, 
+    {
+      "action": "live-stream-transcoding-template/add_transcoding_template", 
+      "function": "test_add_transcoding_template", 
+      "required": [
+        "template_body"
+      ], 
+      "optional": [
+        "host"
+      ], 
+      "file": "apis/live-stream-transcoding-template/add_transcoding_template.py"
+    }, 
+    {
+      "action": "live-stream-transcoding-template/delete_transcoding_template", 
+      "function": "test_delete_transcoding_template", 
+      "required": [
+        "name"
+      ], 
+      "optional": [
+        "host"
+      ], 
+      "file": "apis/live-stream-transcoding-template/delete_transcoding_template.py"
+    }, 
+    {
+      "action": "live-stream-transcoding-template/get_template_info", 
+      "function": "test_get_transcoding_template_info", 
+      "required": [
+        "name"
+      ], 
+      "optional": [
+        "host"
+      ], 
+      "file": "apis/live-stream-transcoding-template/get_template_info.py"
+    }, 
+    {
+      "action": "live-stream-transcoding-template/get_template_list", 
+      "function": "test_get_transcoding_template_list", 
+      "required": [], 
+      "optional": [
+        "content", 
+        "limit", 
+        "offset", 
+        "host"
+      ], 
+      "file": "apis/live-stream-transcoding-template/get_template_list.py"
+    }, 
+    {
+      "action": "live-stream-transcoding-template/update_transcoding_template", 
+      "function": "test_update_transcoding_template", 
+      "required": [
+        "template_body"
+      ], 
+      "optional": [
+        "host"
+      ], 
+      "file": "apis/live-stream-transcoding-template/update_transcoding_template.py"
+    }, 
+    {
+      "action": "pub-relay/create_pub_task", 
+      "function": "test_create_pub_task", 
+      "required": [
+        "task_body"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/create_pub_task.py"
+    }, 
+    {
+      "action": "pub-relay/delete_pub_task", 
+      "function": "test_delete_pub_task", 
+      "required": [
+        "task_id"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/delete_pub_task.py"
+    }, 
+    {
+      "action": "pub-relay/edit_pub_task", 
+      "function": "test_edit_pub_task", 
+      "required": [
+        "task_id", 
+        "task_body"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/edit_pub_task.py"
+    }, 
+    {
+      "action": "pub-relay/get_pub_list", 
+      "function": "test_get_pub_list", 
+      "required": [], 
+      "optional": [
+        "marker", 
+        "limit", 
+        "name"
+      ], 
+      "file": "apis/pub-relay/get_pub_list.py"
+    }, 
+    {
+      "action": "pub-relay/query_pub_task", 
+      "function": "test_query_pub_task", 
+      "required": [
+        "task_id"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/query_pub_task.py"
+    }, 
+    {
+      "action": "pub-relay/query_task_history", 
+      "function": "test_query_task_history", 
+      "required": [], 
+      "optional": [
+        "marker", 
+        "limit", 
+        "name", 
+        "start", 
+        "end"
+      ], 
+      "file": "apis/pub-relay/query_task_history.py"
+    }, 
+    {
+      "action": "pub-relay/query_task_log", 
+      "function": "test_query_task_log", 
+      "required": [
+        "task_id"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/query_task_log.py"
+    }, 
+    {
+      "action": "pub-relay/start_pub_task", 
+      "function": "test_start_pub_task", 
+      "required": [
+        "task_id"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/start_pub_task.py"
+    }, 
+    {
+      "action": "pub-relay/stop_pub_task", 
+      "function": "test_stop_pub_task", 
+      "required": [
+        "task_id"
+      ], 
+      "optional": [], 
+      "file": "apis/pub-relay/stop_pub_task.py"
+    }, 
+    {
+      "action": "recording-management/create_recording", 
+      "function": "test_create_recording_file", 
+      "required": [
+        "bucket_name", 
+        "stream_name", 
+        "start_time", 
+        "end_time"
+      ], 
+      "optional": [
+        "fmt", 
+        "fname", 
+        "pipeline", 
+        "expire_days", 
+        "first_segment_type", 
+        "persistent_delete_after_days", 
+        "notify", 
+        "host", 
+        "timeout"
+      ], 
+      "file": "apis/recording-management/create_recording.py"
+    }, 
+    {
+      "action": "recording-management/get_recording_list", 
+      "function": "test_get_recording_list", 
+      "required": [
+        "bucket_name", 
+        "stream_name"
+      ], 
+      "optional": [
+        "host"
+      ], 
+      "file": "apis/recording-management/get_recording_list.py"
+    }, 
+    {
+      "action": "recording-management/snapshot", 
+      "function": "test_snapshot", 
+      "required": [
+        "bucket_name", 
+        "stream_name"
+      ], 
+      "optional": [
+        "time", 
+        "fname", 
+        "img_format", 
+        "pipeline", 
+        "notify", 
+        "delete_after_days"
+      ], 
+      "file": "apis/recording-management/snapshot.py"
+    }, 
+    {
+      "action": "statistics/query_downflow_stat", 
+      "function": "test_query_downflow_stat", 
+      "required": [
+        "begin"
+      ], 
+      "optional": [
+        "end", 
+        "granularity", 
+        "group", 
+        "hub", 
+        "domain", 
+        "stream_name", 
+        "area", 
+        "select"
+      ], 
+      "file": "apis/statistics/query_downflow_stat.py"
+    }, 
+    {
+      "action": "statistics/query_offline_log", 
+      "function": "test_query_offline_log", 
+      "required": [
+        "domain", 
+        "start", 
+        "end"
+      ], 
+      "optional": [], 
+      "file": "apis/statistics/query_offline_log.py"
+    }, 
+    {
+      "action": "statistics/query_split_offline_log", 
+      "function": "test_query_split_offline_log", 
+      "required": [
+        "domain", 
+        "start", 
+        "end"
+      ], 
+      "optional": [], 
+      "file": "apis/statistics/query_split_offline_log.py"
+    }, 
+    {
+      "action": "statistics/query_stream_history", 
+      "function": "test_query_stream_history", 
+      "required": [
+        "start", 
+        "end", 
+        "stream"
+      ], 
+      "optional": [
+        "domain", 
+        "bucket", 
+        "granularity"
+      ], 
+      "file": "apis/statistics/query_stream_history.py"
+    }, 
+    {
+      "action": "statistics/query_upflow_stat", 
+      "function": "test_query_upflow_stat", 
+      "required": [
+        "begin"
+      ], 
+      "optional": [
+        "end", 
+        "granularity", 
+        "group", 
+        "hub", 
+        "domain", 
+        "stream_name", 
+        "area", 
+        "select"
+      ], 
+      "file": "apis/statistics/query_upflow_stat.py"
+    }, 
+    {
+      "action": "stream-management/ban_stream", 
+      "function": "test_ban_stream", 
+      "required": [
+        "bucket_name", 
+        "stream_key"
+      ], 
+      "optional": [
+        "forbidden_till"
+      ], 
+      "file": "apis/stream-management/ban_stream.py"
+    }, 
+    {
+      "action": "stream-management/create_stream", 
+      "function": "test_create_stream", 
+      "required": [
+        "bucket_name", 
+        "stream_key"
+      ], 
+      "optional": [], 
+      "file": "apis/stream-management/create_stream.py"
+    }, 
+    {
+      "action": "stream-management/delete_stream", 
+      "function": "test_delete_stream", 
+      "required": [
+        "bucket_name", 
+        "stream_key"
+      ], 
+      "optional": [], 
+      "file": "apis/stream-management/delete_stream.py"
+    }, 
+    {
+      "action": "stream-management/get_stream_info", 
+      "function": "test_get_stream_info", 
+      "required": [
+        "bucket_name", 
+        "stream_key"
+      ], 
+      "optional": [], 
+      "file": "apis/stream-management/get_stream_info.py"
+    }, 
+    {
+      "action": "stream-management/get_stream_list", 
+      "function": "test_get_stream_list", 
+      "required": [
+        "bucket_name"
+      ], 
+      "optional": [
+        "prefix", 
+        "offset", 
+        "limit", 
+        "domain", 
+        "start", 
+        "end", 
+        "bucket_id", 
+        "is_forbid"
+      ], 
+      "file": "apis/stream-management/get_stream_list.py"
+    }, 
+    {
+      "action": "stream-management/unban_stream", 
+      "function": "test_unban_stream", 
+      "required": [
+        "bucket_name", 
+        "stream_key"
+      ], 
+      "optional": [], 
+      "file": "apis/stream-management/unban_stream.py"
+    }, 
+    {
+      "action": "utilities/apikey/create_apikey", 
+      "function": "test_create_apikey", 
+      "required": [
+        "name"
+      ], 
+      "optional": [], 
+      "file": "apis/utilities/apikey/create_apikey.py"
+    }, 
+    {
+      "action": "utilities/apikey/delete_apikey", 
+      "function": "test_delete_apikey", 
+      "required": [
+        "apikey_id"
+      ], 
+      "optional": [], 
+      "file": "apis/utilities/apikey/delete_apikey.py"
+    }, 
+    {
+      "action": "utilities/apikey/query_apikey_list", 
+      "function": "test_query_apikey_list", 
+      "required": [], 
+      "optional": [], 
+      "file": "apis/utilities/apikey/query_apikey_list.py"
+    }, 
+    {
+      "action": "utilities/apikey/rename_apikey", 
+      "function": "test_rename_apikey", 
+      "required": [
+        "apikey_id", 
+        "new_name"
+      ], 
+      "optional": [], 
+      "file": "apis/utilities/apikey/rename_apikey.py"
+    }, 
+    {
+      "action": "utilities/query_play_domain", 
+      "function": "test_query_play_domain", 
+      "required": [
+        "bucket_name", 
+        "stream_key", 
+        "domain"
+      ], 
+      "optional": [
+        "expire_time"
+      ], 
+      "file": "apis/utilities/query_play_domain.py"
+    }, 
+    {
+      "action": "utilities/query_publish_domain", 
+      "function": "test_query_publish_domain", 
+      "required": [
+        "bucket_name", 
+        "stream_key", 
+        "domain"
+      ], 
+      "optional": [
+        "expire_time"
+      ], 
+      "file": "apis/utilities/query_publish_domain.py"
+    }
+  ]
+}
