@@ -368,18 +368,6 @@
       "file": "apis/recording-management/create_recording.py"
     }, 
     {
-      "action": "recording-management/get_recording_list", 
-      "function": "test_get_recording_list", 
-      "required": [
-        "bucket_name", 
-        "stream_name"
-      ], 
-      "optional": [
-        "host"
-      ], 
-      "file": "apis/recording-management/get_recording_list.py"
-    }, 
-    {
       "action": "recording-management/snapshot", 
       "function": "test_snapshot", 
       "required": [
